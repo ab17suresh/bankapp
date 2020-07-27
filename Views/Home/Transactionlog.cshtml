@@ -1,0 +1,66 @@
+@using bankapp.Models;
+@{
+    Console.WriteLine("start");
+    //var data =ViewData["TranLog"];
+    @model IEnumerable<bankapp.Models.Transaction>
+    Console.WriteLine("end");
+}
+    
+
+<html>
+    <head>
+        <title>TEST</title>
+        <link rel="stylesheet" href="~/style.css">
+        <script  src="~/lib/jquary/jquery-3.5.1.js"></script>
+        <script src="~/jscript.js" type="text/javascript"></script>
+    </head>
+    <body >
+        <br>
+        <h1>ATM APP</h1>
+        <p></p>
+        <hr>
+            <h1 id="result1"></h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1>your transation log</h1>
+            <br>
+            <br>
+            <table class="center" >
+                
+                <tr>
+                    <th>Tranaction ID</th>
+                    <th>Account NO</th>
+                    <th>Transation Type</th>
+                    <th>Transation Amount</th>
+                    <th>Transation balance</th>
+                    <th>Transation Date</th>
+                </tr>
+                @foreach(var item in @Model)
+                {
+                    <tr>
+                        <th>@item.TranID</th>
+                        <th>@item.AccountNO</th>
+                        <th>@item.TranType</th>
+                        <th>@item.TranAmount</th>
+                        <th>@item.Balance</th>
+                        <th>@item.TranDate</th>
+                    </tr>
+                }
+            </table>
+            <hr>
+            <h1 >Thank you for using C ATM Bank.</h1>
+            <br>
+            <br>
+                <div>
+                 @*<a class="abutton" href="/Home/Mainmenu">Home </a>*@
+                 <input type="button" class="abutton1" onclick="history.back()" value="Home" />
+                </div>
+                <br>
+                 <div>
+                 <a class="abutton" href="/Home/index">logout </a>
+                 
+                </div>        
+    </body>
+</html>

@@ -1,0 +1,30 @@
+
+<html>
+    <head>
+        <title>TEST</title>
+        <link rel="stylesheet" href="~/style.css">
+        <script  src="~/lib/jquary/jquery-3.5.1.js"></script>
+        <script src="~/jscript.js" type="text/javascript"></script>
+    </head>
+    <body >
+        <br>
+        <h1>ATM APP</h1>
+        <p></p>
+        <hr>
+        <form method="POST" asp-action="OnIndexSubmit">
+            <h1 id="result1"></h1>
+            <h1 id="result2">your transaction was done sucessfully</h1>
+            <br>
+            <h1 >Thank you for using C ATM Bank.</h1>
+            <br>
+            <br>
+            <div>
+                 @*<a class="abutton" href="/Home/Mainmenu">Home </a>*@
+                 <input type="button" class="abutton1" onclick="history.go(-2)" value="Home" />
+            </div>
+            <div>
+                 <a class="abutton" href="/Home/index">logout </a>
+            </div>
+        </form>        
+    </body>
+</html>

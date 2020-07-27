@@ -1,0 +1,37 @@
+@{
+    var err3 =ViewData["errormsg1"];
+}
+<html>
+    <head>
+        <title>TEST</title>
+        <link rel="stylesheet" href="~/style.css">
+        <script  src="~/lib/jquary/jquery-3.5.1.js"></script>
+        <script src="~/jscript.js" type="text/javascript"></script>
+    </head>
+    <body >
+        <br>
+        <h1>ATM APP</h1>
+        <p></p>
+        <hr>
+        <form method="POST" action="/Home/withdraw">
+            <div>
+                <h1 >C ATM BANK LIMITED  </h1>
+                <h2 >Customer Banking  </h2>
+                <h3 >withdraw </h3>
+            </div>
+            <div>
+                <br>
+                <h1>@err3</h1>
+                <div>
+                <label for="withamount">withdraw amount : </label>
+                <input type="text" name="wamount"  id="withdrawamount">
+                </div>
+                <br>
+                <br>
+                 <input type="submit"  class="abutton1" value="submit"  id="dbutton">
+            </div>          
+            <hr>
+        </form>        
+    </body>
+</html>
+

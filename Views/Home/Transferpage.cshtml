@@ -1,0 +1,45 @@
+@{
+    var err2 =ViewData["errormsg2"];
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TEST</title>
+        <link rel="stylesheet" href="~/style.css">
+        <script  src="~/lib/jquary/jquery-3.5.1.js"></script>
+        <script src="~/jscript.js" type="text/javascript"></script>
+    </head>
+    <body >
+        <br>
+        <h1>ATM APP</h1>
+        <p></p>
+        <hr>
+        <form method="POST" action="/Home/transfer">
+            <div>
+                <h1 >C ATM BANK LIMITED  </h1>
+                <h2 >Customer Banking  </h2>
+                <h3 >transfer </h3>
+                <br>
+            </div>
+            <div>
+                <h1>@err2</h1>
+                <br>
+                <div>
+                <label for="depamount">account no : </label>
+                <input type="number"  name="acccno"  id="taccountno">
+                </div>
+                <br>
+                <div>
+                <label for="depamount">amount: </label>
+                <input type="number" name="tamount"  id="tamount">
+                </div>
+                <br>
+                <br>
+                <input class="abutton1" type="submit" value="submit"  id="tbutton">
+            </div>          
+            <hr>
+        </form>        
+    </body>
+</html>
